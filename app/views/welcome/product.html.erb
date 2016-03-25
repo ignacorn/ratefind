@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>О продукте</title>
+<!--     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css"> -->
+    <% javascript_include_tag :defaults, :all %>
+    <% stylesheet_link_tag "/css/normalize" %>
+    <% stylesheet_link_tag "css/style.css.erb" %>
+
+</head>
+<body>
+<header>
+    <div class="layout-center">
+        <div class="header-motto">Cлоган</div>
+        <div class="header-contacts">Почта</div>
+        <div class="header-contacts">Телефоны</div>
+    </div>
+</header>
+<main>
+    <div class="navigation clearfix">
+        <div class="layout-center">
+            <div class="logo">Логотип</div>
+            <ul class="menu">
+                <li class="menu-item "><%= link_to "О нас", "/index" %><!-- <a href="index.html">О нас</a> --></li>
+                <li class="menu-item active"><%= link_to "Наше предложение", "/product" %><!-- <a href="product.html">Наше предложение</a> --></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <article>
+        <div class="layout-center">
+            <h2 class="header">Описание программы</h2>
+            <p>Немного о нашем предложении... Немного о нашем предложении... Немного о нашем предложении... Немного о нашем
+                предложении... Немного о нашем предложении... Немного о нашем предложении... Немного о нашем предложении... Немного
+                о
+                нашем предложении... Немного о нашем предложении...
+
+
+            </p>
+            <p>
+                Универсальный инструмент, который позволяет определить популярность кого угодно, и где угодно.
+
+            </p>
+
+            <p>
+                Например, можно узнать, кто популярнее на новостном сайте «Путин, Медведев, или Навальный». Или о какой религии
+                чаще
+                пишут в ЖЖ. И т.д.
+
+            </p>
+
+            <p>
+                Ещё что-то.........
+
+            </p>
+        </div>
+    </article>
+    <article>
+        <div class="slider">
+
+            <div class="slide product slide-one">
+                <div class="layout-center">
+                    <div class="slide-product-photo-left el-1">
+                    <!-- <img src="img/slide-devices.png" alt="" class=""> -->
+                    <%= image_tag "img/slide-devices.png", alt: "", class: "" %>
+                    </div>
+                    <div class="slide-product-text-right el-2">
+                        Работает на <br><span class="big">разных</span> устройствах
+                        <div class="el-3">
+                            <a class="download" href="#">Скачать</a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="slide product slide-two">
+
+                <div class="layout-center">
+                    <div class="slide-product-photo lower el-1">
+                    <!-- <img src="img/slider-interface.png" alt="" class=""> -->
+                    <%= image_tag "img/slider-interface.png", alt: "", class: "" %>
+                    </div>
+                    <div class="slide-product-text el-2">
+
+                        Интуитивно <br><span class="big">понятный</span> интерфейс
+                        <div class="el-3">
+                        <a class="download" href="#">Скачать</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="slide product slide-three">
+                <div class="layout-center">
+
+                    <div class="slide-product-photo lower el-1">
+                    <!-- <img src="img/slider-safe.png" alt="" class=""> -->
+                    <%= image_tag "img/slider-safe.png", alt: "", class: "" %>
+                    </div>
+                    <div class="slide-product-text el-2">
+                        Возможность <br><span class="big">сохранения </span> данных
+                        <div class="el-3">
+                            <a class="download" href="#">Скачать</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider-control">
+
+                <input type="radio" name="slide_control" value="s1" id="s1" checked>
+                <label for="s1"></label>
+
+                <input type="radio" name="slide_control" value="s2" id="s2">
+                <label for="s2"></label>
+
+                <input type="radio" name="slide_control" value="s3" id="s3">
+                <label for="s3"></label>
+
+
+            </div>
+
+        </div>
+    </article>
+    <article>
+        <div class="layout-center">
+            <h2 class="header">Зачем Вам наше приложение?</h2>
+
+            <div class="example">
+                <!-- <img class="example-image" src="img/slide_background.jpg" alt=""> -->
+                <%= image_tag "img/slide_background.jpg", alt: "", class: "example-image" %>
+                <h4 class="example-header">Lorem ipsum</h4>
+                <p class="example-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consequatur, distinctio
+                    ea eligendi facere laboriosam, quaerat quam, repellendus saepe sed similique sint soluta vel voluptate. Aperiam
+                    iure nobis vero!</p>
+            </div>
+
+            <div class="example">
+                <!-- <img class="example-image" src="img/slide_background.jpg" alt=""> -->
+                <%= image_tag "img/slide_background.jpg", alt: "", class: "example-image" %>
+                <h4 class="example-header">Lorem ipsum</h4>
+                <p class="example-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consequatur, distinctio
+                    ea eligendi facere laboriosam, quaerat quam, repellendus saepe sed similique sint soluta vel voluptate. Aperiam
+                    iure nobis vero!</p>
+            </div>
+
+
+            <div class="example">
+                <!-- <img class="example-image" src="img/slide_background.jpg" alt=""> -->
+                <%= image_tag "img/slide_background.jpg", alt: "", class: "example-image" %>
+                <h4 class="example-header">Lorem ipsum</h4>
+                <p class="example-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consequatur, distinctio
+                    ea eligendi facere laboriosam, quaerat quam, repellendus saepe sed similique sint soluta vel voluptate. Aperiam
+                    iure nobis vero!</p>
+            </div>
+
+
+            <a href="#" class="order">Закажите бесплатную консультацию</a>
+
+        </div>
+    </article>
+
+</main>
+
+<footer>
+    <div class="layout-center clearfix">
+
+        <div class="block-left">
+            <div class="social-buttons">
+                <a href="#" class="social"><%= image_tag "img/icons/vk.svg", alt: ""%><!-- <img src="img/icons/vk.svg" alt=""></a> -->
+                <a href="#" class="social"><%= image_tag "img/icons/googleplus.svg", alt: ""%><!-- <img src="img/icons/googleplus.svg" alt=""></a> -->
+                <a href="#" class="social"><%= image_tag "img/icons/facebook.svg", alt: ""%><!-- <img src="img/icons/facebook.svg" alt=""></a> -->
+                <a href="#" class="social"><%= image_tag "img/icons/twitter.svg", alt: ""%><!-- <img src="img/icons/twitter.svg" alt=""></a> -->
+            </div>
+            <p>© 2016, Веб-студия «Epic-Creators»</p>
+
+        </div>
+        <div class="block-right">
+            <div class="footer-logo">Логотип</div>
+            <a class="footer-up" href="#">Вверх</a>
+            <div class="contacts">333-22-11 <a href="">somemail@domain.ru</a></div>
+            <a class="sitemap" href="#">Карта сайта</a>
+
+        </div>
+        <div class="block-center">
+            <!-- <img class="counter" src="img/liveinternet.png" alt="">
+            <img class="counter" src="img/counter.png" alt=""> -->
+            <%= image_tag "img/liveinternet.png", alt: "", class: "counter"%>
+            <%= image_tag "img/counter.png", alt: "", class: "counter"%>
+        </div>
+    </div>
+</footer>
+
+<!-- <script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/scrolltop.js"></script> -->
+
+
+</body>
+</html>

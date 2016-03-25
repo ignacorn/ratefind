@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>О компании</title>
+
+    <% javascript_include_tag '/js/script' %>
+
+    <% stylesheet_link_tag "/css/normalize" %>
+    <% stylesheet_link_tag "css/style.css.erb" %>
+</head>
+
+<body>
+<header>
+    <div class="layout-center">
+        <div class="header-motto">Cлоган</div>
+        <div class="header-contacts">Почта</div>
+        <div class="header-contacts">Телефоны</div>
+    </div>
+</header>
+
+<main>
+    <div class="navigation clearfix">
+        <div class="layout-center">
+            <div class="logo">Логотип</div>
+            <ul class="menu">
+                <li class="menu-item active"><a href="#">О нас</a></li>
+                <li class="menu-item"><%= link_to "Наше предложение", "/product" %><!-- <a href="product.html">Наше предложение</a> --></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <article>
+        <div class="layout-center">
+            <h1 class="header">Заголовок о нас</h1>
+            <p>Текстовое описание компании.</p>
+            <p>Немного истрии о нас и нашей работе...Немного истрии о нас и нашей работе...Немного истрии о нас и нашей
+                работе... Немного истрии о нас и нашей работе... Немного истрии о нас и нашей работе... Немного истрии о нас и
+                нашей
+                работе... Немного истрии о нас и нашей работе...
+            </p>
+            <p>
+                мы молодая IT-компания, у которой есть свой собственный продукт – универсальный инструмент, который позволяет
+                определить
+                популярность кого угодно, и где угодно.
+            </p>
+
+            <p>
+                Например, мы можем узнать, кто популярнее на новостном сайте «Путин, Медведев, или Навальный». Или о какой религии
+                чаще
+                пишут в ЖЖ. И т.д.
+            </p>
+
+            <p>
+                Немного истрии о нас и нашей работе...Немного истрии о нас и нашей работе...Немного истрии о нас и нашей работе...
+
+            </p>
+        </div>
+    </article>
+
+    <article>
+        <div class="layout-center">
+            <h2 class="header">Участники разработки</h2>
+        </div>
+        <div class="slider slider-team">
+            <div class="slide team">
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-kartavec.jpg" alt="Евгений Картавец"> -->
+                        <%= image_tag "img/people-kartavec.jpg", alt: "Евгений Картавец", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Евгений Картавец, руководитель проекта</h3>
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+                            </p>
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide team">
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-novikova.jpg" alt="Оксана Новикова"> -->
+                        <%= image_tag "img/people-novikova.jpg", alt: "Оксана Новикова", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Оксана Новикова, дизайнер</h3>
+                        <div class="el-3">
+                            <p>
+                                Выпускница Школы Программирования по курсу веб-дизайн. Более шести лет в сфере дизайна. Проектирование
+                                пользовательских веб-интерфейсов для сайтов или веб-приложений в Adobe Photoshop CC и CorelDRAW .
+                            </p>
+                            <p> Текущий проект — веб-сайт компании представляющей специализированную поисковую машину медиа-контента в
+                                интернете.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide team">
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-kryuk.jpg" alt="Александр Крюк"> -->
+                        <%= image_tag "img/people-kryuk.jpg", alt: "Александр Крюк", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Александр Крюк, верстальщик</h3>
+                        <div class="el-3">
+                            <p>
+                                Почти восемь лет работаю в верстальшиком в полиграфии. Работал как с глянцевыми журналами, так и с
+                                еженедельниками. Сертифицированный эксперт Adobe (Photoshop CS6). Примерно год назад заинтересовался
+                                HTML-версткой. Изучал некоторое время самостоятельно, но в конце концов пришел в Школу
+                                Программирования. Закончил курс по специальности "Верстальщик" и продолжаю самообучение.
+                            </p>
+                            <p>
+                                Текущий проект делается в рамках стажировки и представляет собой инструмент для определения
+                                популярности чего либо на основе упомининий в интернет-изданиях. Моя задача в рамках проекта
+                                заключается в верстке веб-страниц компании и продукта.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-karpelev.jpg" alt="Алексей Карпелев"> -->
+                        <%= image_tag "img/people-karpelev.jpg", alt: "Алексей Карпелев", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Алексей Карпелев, PHP-разработчик</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-noava.jpg" alt="Илья Еллин"> -->
+                        <%= image_tag "img/people-noava.jpg", alt: "Илья Еллин", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Илья Еллин, Ruby-разработчик</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-noava.jpg" alt="Борис Чаплыгин"> -->
+                        <%= image_tag "img/people-noava.jpg", alt: "Борис Чаплыгин", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Борис Чаплыгин, Java-разработчик</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-noava.jpg" alt="Илья Никитин"> -->
+                        <%= image_tag "img/people-noava.jpg", alt: "Илья Никитин", class: "" %>
+
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Илья Никитин, Java-разработчик</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-tutrumov.jpg" alt="Дмитрий Тютрюмов"> -->
+                        <%= image_tag "img/people-tutrumov.jpg", alt: "Дмитрий Тютрюмов", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Дмитрий Тютрюмов, разработчик Python</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Имею 2.5 года опыта в ручном и автоматизированном тестировании ПО.
+                                Обучался разработке на Python, JavaScript, HTML/CSS, основной framework Django.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-noava.jpg" alt="Дмитрий Данилов"> -->
+                        <%= image_tag "img/people-noava.jpg", alt: "Дмитрий Данилов", class: "" %>
+
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Дмитрий Данилов, разработчик Python</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-noava.jpg" alt="Илья Шакало"> -->
+                        <%= image_tag "img/people-noava.jpg", alt: "Илья Шакало", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Илья Шакало, разработчик Python</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-mnikitin.jpg" alt="Максим Никитин"> -->
+                        <%= image_tag "img/people-mnikitin.jpg", alt: "Максим Никитин", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Максим Никитин, разработчик Python</h3>
+                        <div class="el-3">
+                            <p>
+                                Выпускник GeekBrains. Junior разработчик, занимающий примерно 1 год разработкой на Python 3 + Mysql.
+                            </p>
+                            <p>
+                                Предыдущий проект: реализация SMS-Лояльности(Отсылает и получает ответы от клиентов), отчеты по
+                                SMS-Лояльности.
+                            </p>
+                            <p>Текущий проект: реализация робота(Краулера) для поиска нужных «имен» в новостных лентах и
+                                последующим подсчет рейтинга.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide team">
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-noava.jpg" alt="Александр Яремчук"> -->
+                        <%= image_tag "img/people-noava.jpg", alt: "Александр Яремчук", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Александр Яремчук, разработчик Python</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-leshenko.jpg" alt="Антон Лещенко"> -->
+                        <%= image_tag "img/people-leshenko.jpg", alt: "Антон Лещенко", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Антон Лещенко, разработчик Python</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-kulichkov.jpg" alt="Михаил Куличков"> -->
+                        <%= image_tag "img/people-kulichkov.jpg", alt: "Михаил Куличков", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Михаил Куличков, разработчик Objective-C</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-noava.jpg" alt="Александр Федоров"> -->
+                        <%= image_tag "img/people-noava.jpg", alt: "Александр Федоров", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Александр Федоров, разработчик Objective-C</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="slide team">
+
+                <div class="layout-center">
+                    <div class="slide-photo el-1">
+                        <!-- <img class="" src="img/people-andreenkov.jpg" alt="Александр Андреенков"> -->
+                        <%= image_tag "img/people-andreenkov.jpg", alt: "лександр Андреенков", class: "" %>
+                    </div>
+                    <div class="slide-text el-2">
+                        <h3 class="slide-head">Александр Андреенков, разработчик Objective-C</h3>
+
+                        <div class="el-3">
+                            <p>
+                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
+                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#,
+                                с
+                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
+                            </p>
+
+                            <p>
+                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента
+                                в
+                                интернете.
+
+                            </p>
+
+                            <p>
+                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql,
+                                систем
+                                мониторинга и т.д.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slider-control">
+                <input type="radio" name="slide_control" value="s1" id="s1" checked>
+                <label for="s1"></label>
+
+                <input type="radio" name="slide_control" value="s2" id="s2">
+                <label for="s2"></label>
+
+                <input type="radio" name="slide_control" value="s3" id="s3">
+                <label for="s3"></label>
+
+                <input type="radio" name="slide_control" value="s4" id="s4">
+                <label for="s4"></label>
+
+                <input type="radio" name="slide_control" value="s5" id="s5">
+                <label for="s5"></label>
+
+                <input type="radio" name="slide_control" value="s6" id="s6">
+                <label for="s6"></label>
+
+                <input type="radio" name="slide_control" value="s7" id="s7">
+                <label for="s7"></label>
+
+                <input type="radio" name="slide_control" value="s8" id="s8">
+                <label for="s8"></label>
+
+                <input type="radio" name="slide_control" value="s9" id="s9">
+                <label for="s9"></label>
+
+                <input type="radio" name="slide_control" value="s10" id="s10">
+                <label for="s10"></label>
+
+                <input type="radio" name="slide_control" value="s11" id="s11">
+                <label for="s11"></label>
+
+                <input type="radio" name="slide_control" value="s12" id="s12">
+                <label for="s12"></label>
+
+                <input type="radio" name="slide_control" value="s13" id="s13">
+                <label for="s13"></label>
+
+                <input type="radio" name="slide_control" value="s14" id="s14">
+                <label for="s14"></label>
+
+                <input type="radio" name="slide_control" value="s15" id="s15">
+                <label for="s15"></label>
+
+                <input type="radio" name="slide_control" value="s16" id="s16">
+                <label for="s16"></label>
+            </div>
+
+        </div> <!-- end of slider-->
+
+    </article>
+
+    <article>
+        <div class="layout-center">
+            <h2 class="header">Чем занимается наша веб-студия</h2>
+            <div class="portfolio">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <a href="#" class="order">Закажите бесплатную консультацию</a>
+        </div>
+    </article>
+
+</main>
+<footer>
+    <div class="layout-center clearfix">
+        <div class="block-left">
+            <div class="social-buttons">
+                <a href="#" class="social"><%= image_tag "img/icons/vk.svg", alt: ""%><!-- <img src="img/icons/vk.svg" alt=""></a> -->
+                <a href="#" class="social"><%= image_tag "img/icons/googleplus.svg", alt: ""%><!-- <img src="img/icons/googleplus.svg" alt=""></a> -->
+                <a href="#" class="social"><%= image_tag "img/icons/facebook.svg", alt: ""%><!-- <img src="img/icons/facebook.svg" alt=""></a> -->
+                <a href="#" class="social"><%= image_tag "img/icons/twitter.svg", alt: ""%><!-- <img src="img/icons/twitter.svg" alt=""></a> -->
+            </div>
+            <p>© 2016, Веб-студия «Epic-Creators»</p>
+        </div>
+
+        <div class="block-right">
+            <div class="footer-logo">Логотип</div>
+            <a class="footer-up" href="#">Вверх</a>
+            <div class="contacts">333-22-11 <a href="">somemail@domain.ru</a></div>
+            <a class="sitemap" href="#">Карта сайта</a>
+
+        </div>
+
+        <div class="block-center">
+            <!-- <img class="counter" src="img/liveinternet.png" alt=""> -->
+            <%= image_tag "img/liveinternet.png", alt: "", class: "counter"%>
+            <!-- <img class="counter" src="img/counter.png" alt=""> -->
+            <%= image_tag "img/counter.png", alt: "", class: "counter"%>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,666 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'FranklinGothicBook';
+    src: url('../fonts/FRABK.eot');
+    src: url('../fonts/FRABK.woff') format('woff'),
+    url('../fonts/FRABK.ttf') format('truetype'),
+    url('../fonts/FRABK.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Candara';
+    src: url('../fonts/Candara.eot');
+    src: url('../fonts/Candara.woff') format('woff'),
+    url('../fonts/Candara.ttf') format('truetype'),
+    url('../fonts/Candara.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Variables*/
+
+@primary: #acdf00;
+@secondary: #f88600;
+@white: #fbfff0;
+
+@width: 960px;
+@width-tablet: 768px;
+@width-mobile: 100%;
+
+@column: 305px;
+@column_tablet: 353px;
+
+@slider_height: 306px;
+@slider_height_tablet: 376px;
+@slider_height_mobile: 625px;
+
+@font1: "FranklinGothicBook";
+@font2: "Candara";
+
+.border (@color, @size, @rad) {
+    border: @size solid @color;
+    -webkit-border-radius: @rad;
+    -moz-border-radius: @rad;
+    border-radius: @rad;
+}
+
+/*Layout*/
+
+.layout-center {
+    box-sizing: border-box;
+    width: @width;
+    margin: 0 auto;
+    position: relative;
+    @media screen and (max-width: 960px) {
+        width: @width-tablet;
+        padding: 0 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+        width: @width-mobile;
+        padding: 0 10px;
+    }
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*common*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: @white;
+    min-height: 100vh;
+    font-family: @font1, sans-serif;
+    font-size: 14px;
+    @media screen and (max-width: 767px) {
+        //min-width: 320px;
+    }
+}
+
+/*header*/
+
+header {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: @primary;
+    height: 55px;
+}
+
+.header-motto {
+    font-size: 18px;
+    padding-top: 19px;
+    display: inline-block;
+}
+
+.header-contacts {
+    font-size: 14px;
+    float: right;
+    padding-top: 23px;
+    margin-left: 51px;
+}
+
+/*main*/
+
+.navigation {
+    margin-top: 64px;
+}
+
+.logo {
+    width: 190px;
+    font-family: @font2, sans-serif;
+    font-size: 48px;
+    line-height: 48px;
+    float: left;
+    @media screen and (max-width: 767px) {
+        float: none;
+        margin: 0 auto;
+    }
+
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    position: relative;
+    right: -20px;
+    @media screen and (max-width: 767px) {
+        float: none;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        right: 0;
+
+    }
+}
+
+.menu-item {
+    float: left;
+    font-size: 18px;
+    padding: 7px 21px;
+    @media screen and (max-width: 767px) {
+        float: none;
+        padding: 7px 0;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        text-align: center;
+        width: 80%;
+    }
+
+    & a:hover {
+        color: @secondary;
+    }
+}
+
+.active {
+    .border (@secondary, 1px, 10px 0);
+}
+
+.header {
+    font-family: @font2, sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 48px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*Slider*/
+
+.slider {
+
+    position: relative;
+    box-sizing: border-box;
+    height: @slider_height;
+    overflow: hidden;
+
+    @media screen and (max-width: 960px) {
+        height: @slider_height_tablet;
+    }
+
+    @media screen and (max-width: 767px) {
+        height: @slider_height_mobile;
+    }
+
+    &-team {
+        @media screen and (max-width: 767px) {
+            height: @slider_height_mobile + 100px;
+        }
+    }
+
+    &-control {
+        position: absolute;
+        margin: 0 auto;
+        text-align: center;
+        left: 50%;
+        bottom: 20px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .team {
+        @media screen and (max-width: 767px) {
+            height: @slider_height_mobile + 100px;
+        }
+    }
+
+    .product {
+        padding-top: 10px;
+        height: @slider_height;
+        @media screen and (max-width: 960px) {
+            height: @slider_height_tablet;
+        }
+
+        @media screen and (max-width: 767px) {
+            height: @slider_height_mobile;
+        }
+    }
+
+    .lower {
+        position: relative;
+        top: 17px;
+    }
+}
+
+.slide {
+
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    height: @slider_height;
+    width: 100%;
+    padding: 45px 0;
+    background-image: url("../img/slide_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    @media screen and (max-width: 960px) {
+        height: @slider_height_tablet;
+    }
+
+    @media screen and (max-width: 767px) {
+
+        height: @slider_height_mobile;
+    }
+
+    .el-1, .el-2, .el-3 {
+        display: none;
+    }
+
+    &-photo {
+        img {
+            width: 100%;
+        }
+        height: 206px;
+        width: 206px;
+        overflow: hidden;
+        .border (@secondary, 5px, 50%);
+        display: block;
+        float: left;
+        @media screen and (max-width: 767px) {
+            float: none;
+            margin: 0 auto;
+        }
+    }
+
+    &-head {
+        font-family: Candara, sans-serif;
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: normal;
+        @media screen and (max-width: 767px) {
+            text-align: center;
+            font-size: 25px;
+        }
+
+    }
+
+    &-text {
+        padding-left: 261px;
+        @media screen and (max-width: 767px) {
+            padding: 0;
+
+        }
+    }
+
+    &-product-photo {
+        float: right;
+
+        img {
+            width: 100%;
+        }
+        @media screen and (max-width: 767px) {
+            float: none;
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            max-width: 388px;
+        }
+    }
+
+    &-product-photo-left {
+        float: left;
+        img {
+            width: 100%;
+        }
+        @media screen and (max-width: 767px) {
+            float: none;
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            max-width: 388px;
+        }
+    }
+
+    &-product-text {
+        font-family: @font2, sans-serif;
+        font-size: 48px;
+        width: 57%;
+        margin-top: 10px;
+        float: left;
+        @media screen and (max-width: 960px) {
+            float: none;
+            padding-right: 55%;
+
+        }
+        @media screen and (max-width: 767px) {
+            float: none;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        &-right {
+            font-family: @font2, sans-serif;
+            font-size: 48px;
+            width: 53%;
+            margin-top: 10px;
+            float: right;
+            @media screen and (max-width: 960px) {
+                float: none;
+                padding-left: 55%;
+            }
+
+            @media screen and (max-width: 767px) {
+                float: none;
+                padding: 0;
+                text-align: center;
+                width: 100%;
+
+            }
+        }
+    }
+
+    .big {
+        font-size: 72px;
+        color: @secondary;
+    }
+
+    &-one {
+        background-image: url("../img/slide_product_1.jpg");
+    }
+
+    &-two {
+        background-image: url("../img/slide_product_2.jpg");
+    }
+
+    &-three {
+        background-image: url("../img/slide_product_3.jpg");
+    }
+}
+
+.download {
+    .border(@secondary, 2px, 10px 0);
+    color: @secondary;
+    font-family: @font1, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    width: 145px;
+    padding: 3px 0;
+    margin-top: 20px;
+    display: block;
+    float: right;
+    transition-duration: 0.2s;
+
+    @media screen and (max-width: 960px) {
+        float: left;
+    }
+
+    @media screen and (max-width: 960px) {
+        float: none;
+        margin: 15px auto;
+    }
+
+    &:hover {
+        background-color: @secondary;
+        color: @white;
+        transition-duration: 0.2s;
+    }
+
+}
+
+/*radio buttons*/
+input[type="radio"] {
+    display: none;
+    &:checked + label {
+        background-color: @secondary;
+    }
+}
+
+label {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    .border(@secondary, 1px, 50%);
+    margin: 3px 6px;
+}
+
+/*portfolio*/
+.portfolio {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.item {
+    width: @column;
+    height: 110px;
+    .border(@secondary, 2px, 10px 0);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+    @media screen and (max-width: 960px) {
+        width: @column_tablet;
+    }
+}
+
+.order {
+    .border(@secondary, 2px, 10px 0);
+    background-color: @primary;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    width: 425px;
+    margin: 31px auto 73px;
+    padding: 10px 0;
+
+    @media screen and (max-width: 767px) {
+        width: 300px;
+    }
+}
+
+/*Преимущества*/
+
+.example {
+    margin-bottom: 16px;
+    min-height: 146px;
+
+    &-image {
+        float: left;
+        margin-right: 22px;
+        width: @column;
+        height: 146px;
+        .border(@secondary, 2px, 10px 0);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+
+/*footer*/
+footer {
+    background-color: @primary;
+    padding: 36px 0;
+}
+
+.block-left {
+    display: block;
+    width: @column;
+    margin-right: 22px;
+    float: left;
+
+    @media screen and (max-width: 960px) {
+        width: @column_tablet;
+    }
+
+    @media screen and (max-width: 767px) {
+        //width: 200px;
+        float: none;
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    & p {
+
+        margin-bottom: 0;
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
+    }
+}
+
+.social-buttons {
+    margin-bottom: 107px;
+    @media screen and (max-width: 960px) {
+        margin-bottom: 0;
+        //text-align: center;
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+}
+
+.social {
+    @media screen and (max-width: 767px) {
+    }
+    img {
+        width: 35px;
+        margin-right: 10px;
+        transition-duration: 0.2s;
+
+        &:hover {
+            transform: scale(1.25);
+            transition-duration: 0.2s;
+        }
+    }
+}
+
+.block-center {
+    width: @column;
+    float: left;
+    position: relative;
+    margin-right: 22px;
+    @media screen and (max-width: 960px) {
+        width: @column_tablet;
+    }
+
+    @media screen and (max-width: 767px) {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .counter {
+        margin-top: 130px;
+        display: block;
+        float: left;
+        margin-right: 2px;
+        @media screen and (max-width: 960px) {
+            margin-top: 16px;
+        }
+
+        @media screen and (max-width: 767px) {
+            display: inline-block;
+            float: none;
+        }
+
+    }
+}
+
+.block-right {
+    width: @column;
+    float: right;
+    @media screen and (max-width: 960px) {
+        width: @column_tablet;
+    }
+
+    @media screen and (max-width: 767px) {
+        float: none;
+        width: 100%;
+
+    }
+}
+
+.footer-logo {
+    width: 190px;
+    font-family: Candara, sans-serif;
+    font-size: 48px;
+    line-height: 48px;
+    @media screen and (max-width: 767px) {
+        margin: 0 auto;
+    }
+}
+
+.footer-up {
+    padding: 12px 1px;
+    .border(@secondary, 2px, 10px 0);
+    position: absolute;
+    top: -20px;
+    right: 0;
+    @media screen and (max-width: 767px) {
+        top: -85px;
+        right: 10px;
+    }
+
+    @media screen and (max-width: 960px) {
+        right: 20px;
+    }
+}
+
+.contacts {
+    margin-top: 65px;
+    text-align: right;
+    @media screen and (max-width: 960px) {
+        margin-top: 19px;
+        text-align: right;
+
+    }
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+
+    }
+
+}
+
+.sitemap {
+    display: block;
+    text-align: right;
+    margin-top: 16px;
+    @media screen and (max-width: 960px) {
+        text-align: right;
+
+    }
+    @media screen and (max-width: 767px) {
+        text-align: center;
+
+    }
+}
+
