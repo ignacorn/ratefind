@@ -2,11 +2,16 @@
 <div style="margin: auto; width: 800px;  border-color: black; height: 100%;" >
 	
 	<div style="background-color: cyan; width: 40%; height: 100%; float: left; padding: 10px;">
-		<%= link_to "link!", 'admin' %>
+		<%= link_to "daily!", 'user/daily' %>
 	</div>
 	
-	<div style="height: 100%;  background-color: red;">
-	
+	<div style="height: 100%;  background-color: red; width: auto;">
+	<%= form_tag("/admin", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= datetime_field(:user, :meeting_time) %>
+  <%= submit_tag("Search") %>
+<% end %>
 	</div>
-
+<% console %>
 </div>

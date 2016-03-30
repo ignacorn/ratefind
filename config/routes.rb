@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/user' => 'interface#user'
   get '/admin' => 'interface#admin'
   get '/action' => 'interface#action'
+  get '/user/daily' => 'interface#daily'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

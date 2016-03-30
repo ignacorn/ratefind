@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>О компании</title>
 
-    <% javascript_include_tag '/js/script' %>
+   
 
     <% stylesheet_link_tag "/css/normalize" %>
     <% stylesheet_link_tag "css/style.css.erb" %>
@@ -14,16 +14,16 @@
 <body>
 <header>
     <div class="layout-center">
-        <div class="header-motto">Cлоган</div>
-        <div class="header-contacts">Почта</div>
-        <div class="header-contacts">Телефоны</div>
+        <div class="header-motto">Оцифрованная фантазия!</div>
+        <!--<div class="header-contacts">Почта</div>-->
+        <div class="header-contacts">333-22-11, somemail@domain.ru</div>
     </div>
 </header>
 
 <main>
     <div class="navigation clearfix">
         <div class="layout-center">
-            <div class="logo">Логотип</div>
+            <div class="logo"><%= image_tag "img/epic-logo.png", alt: ''%></div>
             <ul class="menu">
                 <li class="menu-item active"><%= link_to "О нас", "/index" %><!-- <a href="#">О нас</a> --></li>
                 <li class="menu-item"><%= link_to "Наше предложение", "/product" %><!-- <a href="product.html">Наше предложение</a> --></li>
@@ -35,28 +35,14 @@
     <article>
         <div class="layout-center">
             <h1 class="header">Заголовок о нас</h1>
-            <p>Текстовое описание компании.</p>
-            <p>Немного истрии о нас и нашей работе...Немного истрии о нас и нашей работе...Немного истрии о нас и нашей
-                работе... Немного истрии о нас и нашей работе... Немного истрии о нас и нашей работе... Немного истрии о нас и
-                нашей
-                работе... Немного истрии о нас и нашей работе...
-            </p>
-            <p>
-                мы молодая IT-компания, у которой есть свой собственный продукт – универсальный инструмент, который позволяет
-                определить
-                популярность кого угодно, и где угодно.
-            </p>
-
-            <p>
-                Например, мы можем узнать, кто популярнее на новостном сайте «Путин, Медведев, или Навальный». Или о какой религии
-                чаще
-                пишут в ЖЖ. И т.д.
-            </p>
-
-            <p>
-                Немного истрии о нас и нашей работе...Немного истрии о нас и нашей работе...Немного истрии о нас и нашей работе...
-
-            </p>
+            <p>Приветствуем Вас, дорогой посетитель нашего сайта!</p>
+            <p>Мы молодая IT-компания, участников которой объединяет ничем не ограниченный полёт фантазии и огромный стимул к
+                воплощению её в жизнь!</p>
+            <p>Мы создали для Вас уникальный продукт – универсальный инструмент, который позволяет определить популярность кого
+                угодно, и где угодно. Например, мы можем узнать, кто популярнее на новостном сайте «Путин, Медведев, или Навальный».
+                Или о какой религии чаще пишут в ЖЖ. И т.д.</p>
+            <p>И, конечно, наша программа поможет вам определиться, какой вид деятельности избрать для собственного дела! Станьте
+                успешними с Ratefinder!</p>
         </div>
     </article>
 
@@ -74,19 +60,10 @@
                     <div class="slide-text el-2">
                         <h3 class="slide-head">Евгений Картавец, руководитель проекта</h3>
                         <div class="el-3">
-                            <p>
-                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
-                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
-                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
-                            </p>
-                            <p>
-                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
-                                интернете.
-                            </p>
-                            <p>
-                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
-                                мониторинга и т.д.
-                            </p>
+                            <p>Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы разработчиков.
+                                Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с использованием
+                                Sql и NoSql баз данных, веб-сервисов и т.д.</p>
+                            <p>В последнее время активно занимается преподавательской деятельностью на IT-портале GeekBrains.</p>
                         </div>
                     </div>
                 </div>
@@ -180,22 +157,8 @@
                         <h3 class="slide-head">Илья Еллин, Ruby-разработчик</h3>
 
                         <div class="el-3">
-                            <p>
-                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
-                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
-                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
-                            </p>
-
-                            <p>
-                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
-                                интернете.
-
-                            </p>
-
-                            <p>
-                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
-                                мониторинга и т.д.
-                            </p>
+                            <p>Выпускник GeekBrains по специальности "Программист Ruby". Изучал HTML/CSS, Javascript, Ruby. На данный
+                                момент основное направление - фреймворк Ruby on Rails.</p>
                         </div>
 
                     </div>
@@ -455,19 +418,8 @@
 
                         <div class="el-3">
                             <p>
-                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
-                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#, с
-                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
-                            </p>
-
-                            <p>
-                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента в
-                                интернете.
-                            </p>
-
-                            <p>
-                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql, систем
-                                мониторинга и т.д.
+                                Выпускник РГУ по специальности "Экономист-математик". Работает системным администратором. Изучал C/C++,
+                                Objective-C, Swift. Хочет стать разработчиком iOS-приложений.
                             </p>
                         </div>
 
@@ -513,31 +465,14 @@
                 <div class="layout-center">
                     <div class="slide-photo el-1">
                         <!-- <img class="" src="img/people-andreenkov.jpg" alt="Александр Андреенков"> -->
-                        <%= image_tag "img/people-andreenkov.jpg", alt: "лександр Андреенков", class: "" %>
+                        <%= image_tag "img/people-andreenkov.jpg", alt: "Александр Андреенков", class: "" %>
                     </div>
                     <div class="slide-text el-2">
                         <h3 class="slide-head">Александр Андреенков, разработчик Objective-C</h3>
 
                         <div class="el-3">
-                            <p>
-                                Выпускник ВМиК МГУ. За 5 лет прошел путь от младшего программиста до руководителя группы
-                                разработчиков. Начинал в студенческие годы с разработки на Qt C++. Позже занялся разработкой на C#,
-                                с
-                                использованием Sql и NoSql баз данных, веб-сервисов и т.д.
-                            </p>
-
-                            <p>
-                                Текущий проект преподавателя представляет собой специализированную поисковую машину медиа-контента
-                                в
-                                интернете.
-
-                            </p>
-
-                            <p>
-                                Основная разработка по-прежнему ведётся на C#, с использованием реляционных баз данных, NoSql,
-                                систем
-                                мониторинга и т.д.
-                            </p>
+                            <p>Выпускник Краснодарского Колледжа Электронного Приборостроения. На пути младшего программиста ios. В
+                                последнее время активно занимаюсь разработкой мобильных приложений!</p>
                         </div>
 
                     </div>
@@ -603,12 +538,33 @@
         <div class="layout-center">
             <h2 class="header">Чем занимается наша веб-студия</h2>
             <div class="portfolio">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <div class="item">
+                    <div class="item-img-container">
+                        <%= image_tag "img/studio-web.png", alt: "" %><!-- <img src="img/studio-web.png" alt=""> -->
+                    </div>
+                    <p class="item-txt">Создание сайтов</p>
+                </div>
+                <div class="item">
+                    <div class="item-img-container"><%= image_tag "img/studio-seo.png", alt: "" %><!-- <img src="img/studio-seo.png" alt=""> --></div>
+                    <p class="item-txt">Продвижение и оптимизация</p>
+                </div>
+                <div class="item">
+                    <div class="item-img-container"><%= image_tag "img/studio-web-dev.png", alt: "" %><!-- <img src="img/studio-web-dev.png" alt=""> --></div>
+                    <p class="item-txt">Веб разработка</p>
+                </div>
+                <div class="item">
+                    <div class="item-img-container"><%= image_tag "img/studio-server.png", alt: "" %><!-- <img src="img/studio-server.png" alt=""> --></div>
+                    <p class="item-txt">Разработка серверных приложений</p>
+                </div>
+                <div class="item">
+                    <div class="item-img-container"><%= image_tag "img/studio-php.png", alt: "" %><!-- <img src="img/studio-php.png" alt=""> --></div>
+                    <p class="item-txt">Верстка и программирование</p>
+                </div>
+                <div class="item">
+                    <div class="item-img-container"><%= image_tag "img/studio-mobile.png", alt: "" %><!-- <img src="img/studio-mobile.png" alt=""> --></div>
+
+                    <p class="item-txt">Разработка мобильных <br> приложений</p>
+                </div>
             </div>
             <a href="#" class="order">Закажите бесплатную консультацию</a>
         </div>
@@ -620,7 +576,7 @@
         <div class="block-left">
             <div class="social-buttons">
                 <a href="#" class="social"><%= image_tag "img/icons/vk.svg", alt: ""%><!-- <img src="img/icons/vk.svg" alt=""></a> -->
-                <a href="#" class="social"><%= image_tag "img/icons/googleplus.svg", alt: ""%><!-- <img src="img/icons/googleplus.svg" alt=""></a> -->
+
                 <a href="#" class="social"><%= image_tag "img/icons/facebook.svg", alt: ""%><!-- <img src="img/icons/facebook.svg" alt=""></a> -->
                 <a href="#" class="social"><%= image_tag "img/icons/twitter.svg", alt: ""%><!-- <img src="img/icons/twitter.svg" alt=""></a> -->
             </div>
@@ -628,7 +584,7 @@
         </div>
 
         <div class="block-right">
-            <div class="footer-logo">Логотип</div>
+            <div class="footer-logo"><%= image_tag "img/epic-logo.png", alt: ""%></div>
             <a class="footer-up" href="#">Вверх</a>
             <div class="contacts">333-22-11 <a href="">somemail@domain.ru</a></div>
             <a class="sitemap" href="#">Карта сайта</a>

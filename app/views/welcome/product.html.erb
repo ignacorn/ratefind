@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>О продукте</title>
-<!--     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css"> -->
-    <% javascript_include_tag :defaults, :all %>
+
+    <% #javascript_include_tag :defaults, :all %>
     <% stylesheet_link_tag "/css/normalize" %>
     <% stylesheet_link_tag "css/style.css.erb" %>
 
@@ -14,15 +13,15 @@
 <body>
 <header>
     <div class="layout-center">
-        <div class="header-motto">Cлоган</div>
-        <div class="header-contacts">Почта</div>
-        <div class="header-contacts">Телефоны</div>
+        <div class="header-motto">Оцифрованная фантазия!</div>
+        <!-- <div class="header-contacts">Почта</div> -->
+        <div class="header-contacts">333-22-11, somemail@domain.ru</div>
     </div>
 </header>
 <main>
     <div class="navigation clearfix">
         <div class="layout-center">
-            <div class="logo">Логотип</div>
+            <div class="logo"><%= image_tag "img/epic-logo.png", alt: ""%></div>
             <ul class="menu">
                 <li class="menu-item "><%= link_to "О нас", "/index" %><!-- <a href="index.html">О нас</a> --></li>
                 <li class="menu-item active"><%= link_to "Наше предложение", "/product" %><!-- <a href="product.html">Наше предложение</a> --></li>
@@ -30,32 +29,32 @@
             </ul>
         </div>
     </div>
-    <article>
+    <article class ="about-product">
         <div class="layout-center">
-            <h2 class="header">Описание программы</h2>
-            <p>Немного о нашем предложении... Немного о нашем предложении... Немного о нашем предложении... Немного о нашем
-                предложении... Немного о нашем предложении... Немного о нашем предложении... Немного о нашем предложении... Немного
-                о
-                нашем предложении... Немного о нашем предложении...
+            <h2 class="header">Кто владеет информацией, тот владеет миром</h2>
+            <p><span class="big-text">Ratefinder</span> занимается вопросами принятия решений в ситуации неопределенности.</p>
+
+            <ul>
+                <li>Неопределенность потока производства, потребления и обмена.</li>
+                <li>Неопределенность потребительского выбора.</li>
+                <li>Неопределенность в отношении самой человеческой жизни.</li>
+            </ul>
 
 
-            </p>
-            <p>
-                Универсальный инструмент, который позволяет определить популярность кого угодно, и где угодно.
+            <h3>Где нужен Ratefinder?</h3>
 
-            </p>
 
-            <p>
-                Например, можно узнать, кто популярнее на новостном сайте «Путин, Медведев, или Навальный». Или о какой религии
-                чаще
-                пишут в ЖЖ. И т.д.
-
-            </p>
-
-            <p>
-                Ещё что-то.........
-
-            </p>
+            <ul>
+                <li>финансовые службы предприятий различных форм собственности;</li>
+                <li>рекламные и маркетинговые компании, аналитические службы предприятий и фирм;</li>
+                <li>организации, занимающиеся внешнеэкономической, валютно-кредитной, оценочной, финансовой и туристической
+                    деятельностью;
+                </li>
+                <li>организации, где для оценки финансового риска требуется аналитическое мышление, основанное на глубоком знании
+                    экономики,
+                </li>
+                <li>математики, статистики и компьютерных технологий.</li>
+            </ul>
         </div>
     </article>
     <article>
@@ -63,11 +62,11 @@
 
             <div class="slide product slide-one">
                 <div class="layout-center">
-                    <div class="slide-product-photo-left el-1">
+                    <div class="product-photo-left el-1">
                     <!-- <img src="img/slide-devices.png" alt="" class=""> -->
                     <%= image_tag "img/slide-devices.png", alt: "", class: "" %>
                     </div>
-                    <div class="slide-product-text-right el-2">
+                    <div class="product-text-right el-2">
                         Работает на <br><span class="big">разных</span> устройствах
                         <div class="el-3">
                             <a class="download" href="#">Скачать</a>
@@ -82,11 +81,11 @@
             <div class="slide product slide-two">
 
                 <div class="layout-center">
-                    <div class="slide-product-photo lower el-1">
+                    <div class="product-photo lower el-1">
                     <!-- <img src="img/slider-interface.png" alt="" class=""> -->
                     <%= image_tag "img/slider-interface.png", alt: "", class: "" %>
                     </div>
-                    <div class="slide-product-text el-2">
+                    <div class="product-text el-2">
 
                         Интуитивно <br><span class="big">понятный</span> интерфейс
                         <div class="el-3">
@@ -101,11 +100,11 @@
             <div class="slide product slide-three">
                 <div class="layout-center">
 
-                    <div class="slide-product-photo lower el-1">
+                    <div class="product-photo lower el-1">
                     <!-- <img src="img/slider-safe.png" alt="" class=""> -->
                     <%= image_tag "img/slider-safe.png", alt: "", class: "" %>
                     </div>
-                    <div class="slide-product-text el-2">
+                    <div class="product-text el-2">
                         Возможность <br><span class="big">сохранения </span> данных
                         <div class="el-3">
                             <a class="download" href="#">Скачать</a>
@@ -133,34 +132,33 @@
     </article>
     <article>
         <div class="layout-center">
-            <h2 class="header">Зачем Вам наше приложение?</h2>
+            <h2 class="header">Зачем Ratefinder именно вам?</h2>
+            <p class="lead">В жизни, как правило, преуспевает больше других тот, кто располагает лучшей информацией.</p>
 
             <div class="example">
-                <!-- <img class="example-image" src="img/slide_background.jpg" alt=""> -->
-                <%= image_tag "img/slide_background.jpg", alt: "", class: "example-image" %>
-                <h4 class="example-header">Lorem ipsum</h4>
-                <p class="example-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consequatur, distinctio
-                    ea eligendi facere laboriosam, quaerat quam, repellendus saepe sed similique sint soluta vel voluptate. Aperiam
-                    iure nobis vero!</p>
+                <div class="example-image">
+                <%= image_tag "img/product_business.png", alt: "" %> <!-- <img src="img/product_business.png" alt=""> -->
+                </div>
+                <h4 class="example-header">Хотите запустить собственное дело?</h4>
+                <p class="example-text"><span class="example-selected">Ratefinder</span>  подскажет, какие ниши не заняты и найдёт партнёров, которые помогут вашему делу стать успешным.</p>
             </div>
 
             <div class="example">
-                <!-- <img class="example-image" src="img/slide_background.jpg" alt=""> -->
-                <%= image_tag "img/slide_background.jpg", alt: "", class: "example-image" %>
-                <h4 class="example-header">Lorem ipsum</h4>
-                <p class="example-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consequatur, distinctio
-                    ea eligendi facere laboriosam, quaerat quam, repellendus saepe sed similique sint soluta vel voluptate. Aperiam
-                    iure nobis vero!</p>
+                <div class="example-image">
+                    <%= image_tag "img/product_cart.png", alt: "" %> <!-- <img src="img/product_cart.png" alt=""> -->
+                </div>
+                <h4 class="example-header">Открываете интернет-магазин?</h4>
+                <p class="example-text"><span class="example-selected">Ratefinder</span>  «научит», какие товары или услуги наиболее актуальны и пользуются большим спросом.</p>
             </div>
 
 
             <div class="example">
-                <!-- <img class="example-image" src="img/slide_background.jpg" alt=""> -->
-                <%= image_tag "img/slide_background.jpg", alt: "", class: "example-image" %>
-                <h4 class="example-header">Lorem ipsum</h4>
-                <p class="example-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consequatur, distinctio
-                    ea eligendi facere laboriosam, quaerat quam, repellendus saepe sed similique sint soluta vel voluptate. Aperiam
-                    iure nobis vero!</p>
+                <div class="example-image">
+                    <%= image_tag "img/product_ball.png", alt: "" %> <!-- <img src="img/product_ball.png" alt=""> -->
+                </div>
+                <h4 class="example-header">Любите делать ставки на спорт?</h4>
+                <p class="example-text"><span class="example-selected">Ratefinder</span> поможет определить команды и игроков,
+                    которые играют лучше и выигрывают чаще.</p>
             </div>
 
 
@@ -177,7 +175,7 @@
         <div class="block-left">
             <div class="social-buttons">
                 <a href="#" class="social"><%= image_tag "img/icons/vk.svg", alt: ""%><!-- <img src="img/icons/vk.svg" alt=""></a> -->
-                <a href="#" class="social"><%= image_tag "img/icons/googleplus.svg", alt: ""%><!-- <img src="img/icons/googleplus.svg" alt=""></a> -->
+                
                 <a href="#" class="social"><%= image_tag "img/icons/facebook.svg", alt: ""%><!-- <img src="img/icons/facebook.svg" alt=""></a> -->
                 <a href="#" class="social"><%= image_tag "img/icons/twitter.svg", alt: ""%><!-- <img src="img/icons/twitter.svg" alt=""></a> -->
             </div>
