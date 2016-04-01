@@ -53,29 +53,31 @@ function Hide(i) {
     }, 1000);
 }
 
-var controls = $("[name = slide_control]");
-var timer;
-var CurrentSlide = $("input:checked").index("[name = slide_control]");
-Show(CurrentSlide);
 
-controls.click(function() {
-    clearInterval(timer);
-    Toggle(CurrentSlide, $(this).index("[name = slide_control]"));
-    CurrentSlide = $(this).index("[name = slide_control]");
-    timer = setInterval(function() {
-        if (CurrentSlide + 1 == controls.length) {
-            Toggle(CurrentSlide, 0);
-            CurrentSlide = 0;
-        } else {
-            Toggle(CurrentSlide, CurrentSlide + 1);
-            CurrentSlide += 1;
-        }
-        controls.eq(CurrentSlide).prop("checked", true);
-    }, 20000)
+$( document ).ready(function(){
+    var controls = $("[name = slide_control]");
+    var timer;
+    var CurrentSlide = $("input:checked").index("[name = slide_control]");
+    Show(CurrentSlide);
 
-});
+    controls.click(function() {
+        clearInterval(timer);
+        Toggle(CurrentSlide, $(this).index("[name = slide_control]"));
+        CurrentSlide = $(this).index("[name = slide_control]");
+        timer = setInterval(function() {
+            if (CurrentSlide + 1 == controls.length) {
+                Toggle(CurrentSlide, 0);
+                CurrentSlide = 0;
+            } else {
+                Toggle(CurrentSlide, CurrentSlide + 1);
+                CurrentSlide += 1;
+            }
+            controls.eq(CurrentSlide).prop("checked", true);
+        }, 20000)
 
-/*Start timer when page loaded, with delay*/
+    });
+
+    /*Start timer when page loaded, with delay*/
 //setTimeout(function() {
     timer = setInterval(function() {
         if (CurrentSlide + 1 == $(controls).length) {
@@ -88,3 +90,4 @@ controls.click(function() {
         controls.eq(CurrentSlide).prop("checked", true);
     }, 20000);
 //}, 5000)
+});
