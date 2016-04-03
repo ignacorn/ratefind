@@ -1,17 +1,142 @@
-<h1>Interface#user</h1>
-<div style="margin: auto; width: 800px;  border-color: black; height: 100%;" >
-	
-	<div style="background-color: cyan; width: 40%; height: 100%; float: left; padding: 10px;">
-		<%= link_to "daily!", 'user/daily' %>
-	</div>
-	
-	<div style="height: 100%;  background-color: red; width: auto;">
-	<%= form_tag("/admin", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= datetime_field(:user, :meeting_time) %>
-  <%= submit_tag("Search") %>
-<% end %>
-	</div>
-<% console %>
-</div>
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Для пользователя</title>
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<body>
+<header>
+    <div class="layout-center">
+        <div class="header-motto">Оцифрованная фантазия!</div>
+        <!--<div class="header-contacts">Почта</div>-->
+        <div class="header-contacts">333-22-11, somemail@domain.ru</div>
+    </div>
+</header>
+<main>
+    <div class="navigation clearfix">
+        <div class="layout-center">
+            <div class="logo"><img src="img/epic-logo.png" alt=""></div>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">О нас</a></li>
+                <li class="menu-item"><a href="product.html">Наше предложение</a></li>
+                <li class="menu-item active"><a href="#">Для пользователя</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <article>
+        <div class="layout-center">
+            <h1 class="header">Заголовок</h1>
+            <h4 class="instruction-header">Здесь может быть инструкция по использованию.</h4>
+            <ul class="instruction-list">
+                <li>сделайте то-то</li>
+                <li>нажмите туда-то</li>
+                <li>посмотрите результат там-то</li>
+            </ul>
+        </div>
+    </article>
+    <section class="forms">
+        <div class="layout-center">
+            <form class="by_site" action="">
+
+                <div class="form-container">
+                    <label class="label-big" for="site_by_site">Статистика по сайту:</label>
+
+                    <select name="site" id="site_by_site">
+                        <option value="a">lenta.ru</option>
+                        <option value="b">yandex</option>
+                        <option value="c">bbc</option>
+                    </select>
+                </div>
+
+                <div class="form-container">
+                    <label class="label-big" for="obj_by_site">Для объекта исследования:</label>
+
+                    <select name="object" id="obj_by_site">
+                        <option value="c">Клуб «Реал»</option>
+                        <option value="e">Клуб «Реал»</option>
+                        <option value="f">Клуб «Реал»</option>
+                    </select>
+                </div>
+                <!--<input class="submit" type="submit" value="Показать">-->
+                <a href="results.html" class="submit">Показать</a>
+
+
+
+            </form>
+
+            <div class="divider">
+                <div class="line"></div>
+                <div class="round"></div>
+                <div class="line"></div>
+
+            </div>
+
+            <form class="by_date" action="">
+
+                <div class="form-container">
+                    <label class="label-big" for="site_by_date">Статистика по сайту:</label>
+
+                    <select name="site2" id="site_by_date">
+                        <option value="g">lenta.ru</option>
+                        <option value="h">yandex</option>
+                        <option value="i">bbc</option>
+                    </select>
+                </div>
+
+                <div class="form-container">
+                <p class="label-big">За период (дд.мм.ггг):</p>
+                <div>
+                <label class="label-small" for="date_from">от <input type="date" id="date_from"></label>
+                <label class="label-small" for="date_to">от <input type="date" id="date_to"></label>
+                </div>
+                </div>
+
+                <div class="form-container">
+
+                <label class="label-big" for="obj_by_date">Для объекта исследования:</label>
+
+                <select name="object2" id="obj_by_date">
+                    <option value="j">Клуб «Реал»</option>
+                    <option value="k">Клуб «Реал»</option>
+                    <option value="l">Клуб «Реал»</option>
+                </select>
+                </div>
+                <!--<input class="submit" type="submit" value="Показать">-->
+                <a href="results.html" class="submit">Показать</a>
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="layout-center clearfix">
+        <div class="block-left">
+            <div class="social-buttons">
+                <a href="https://vk.com/public118236873" class="social"><img src="img/icons/vk.svg" alt=""></a>
+                <a href="https://www.facebook.com/groups/1583861135260815/" class="social"><img src="img/icons/facebook.svg" alt=""></a>
+                <a href="https://twitter.com/EpicCreators" class="social"><img src="img/icons/twitter.svg" alt=""></a>
+            </div>
+            <p>© 2016, Веб-студия «Epic-Creators»</p>
+        </div>
+
+        <div class="block-right">
+            <div class="footer-logo"><img src="img/epic-logo.png" alt=""></div>
+            <a class="footer-up" href="#">Вверх</a>
+            <div class="contacts">333-22-11, <a href="">somemail@domain.ru</a></div>
+            <a class="sitemap" href="#">Карта сайта</a>
+
+        </div>
+
+        <div class="block-center">
+            <img class="counter" src="img/liveinternet.png" alt="">
+            <img class="counter" src="img/counter.png" alt="">
+        </div>
+
+    </div>
+</footer>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/scrolltop.js"></script>
+</body>
+</html>

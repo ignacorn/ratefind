@@ -15,7 +15,6 @@
 <header>
     <div class="layout-center">
         <div class="header-motto">Оцифрованная фантазия!</div>
-        <!--<div class="header-contacts">Почта</div>-->
         <div class="header-contacts">333-22-11, somemail@domain.ru</div>
     </div>
 </header>
@@ -27,7 +26,7 @@
             <ul class="menu">
                 <li class="menu-item active"><%= link_to "О нас", "/index" %><!-- <a href="#">О нас</a> --></li>
                 <li class="menu-item"><%= link_to "Наше предложение", "/product" %><!-- <a href="product.html">Наше предложение</a> --></li>
-                <li class="menu-item"><a href="#">Контакты</a></li>
+                <li class="menu-item"><%= link_to "Для пользователя", "/user" %><!-- <a href="#">Контакты</a></li> -->
             </ul>
         </div>
     </div>
@@ -482,52 +481,52 @@
 
             <div class="slider-control">
                 <input type="radio" name="slide_control" value="s1" id="s1" checked>
-                <label for="s1"></label>
+                <label class="sl" for="s1"></label>
 
                 <input type="radio" name="slide_control" value="s2" id="s2">
-                <label for="s2"></label>
+                <label class="sl" for="s2"></label>
 
                 <input type="radio" name="slide_control" value="s3" id="s3">
-                <label for="s3"></label>
+                <label class="sl" for="s3"></label>
 
                 <input type="radio" name="slide_control" value="s4" id="s4">
-                <label for="s4"></label>
+                <label class="sl" for="s4"></label>
 
                 <input type="radio" name="slide_control" value="s5" id="s5">
-                <label for="s5"></label>
+                <label class="sl" for="s5"></label>
 
                 <input type="radio" name="slide_control" value="s6" id="s6">
-                <label for="s6"></label>
+                <label class="sl" for="s6"></label>
 
                 <input type="radio" name="slide_control" value="s7" id="s7">
-                <label for="s7"></label>
+                <label class="sl" for="s7"></label>
 
                 <input type="radio" name="slide_control" value="s8" id="s8">
-                <label for="s8"></label>
+                <label class="sl" for="s8"></label>
 
                 <input type="radio" name="slide_control" value="s9" id="s9">
-                <label for="s9"></label>
+                <label class="sl" for="s9"></label>
 
                 <input type="radio" name="slide_control" value="s10" id="s10">
-                <label for="s10"></label>
+                <label class="sl" for="s10"></label>
 
                 <input type="radio" name="slide_control" value="s11" id="s11">
-                <label for="s11"></label>
+                <label class="sl" for="s11"></label>
 
                 <input type="radio" name="slide_control" value="s12" id="s12">
-                <label for="s12"></label>
+                <label class="sl" for="s12"></label>
 
                 <input type="radio" name="slide_control" value="s13" id="s13">
-                <label for="s13"></label>
+                <label class="sl" for="s13"></label>
 
                 <input type="radio" name="slide_control" value="s14" id="s14">
-                <label for="s14"></label>
+                <label class="sl" for="s14"></label>
 
                 <input type="radio" name="slide_control" value="s15" id="s15">
-                <label for="s15"></label>
+                <label class="sl" for="s15"></label>
 
                 <input type="radio" name="slide_control" value="s16" id="s16">
-                <label for="s16"></label>
+                <label class="sl" for="s16"></label>
             </div>
 
         </div> <!-- end of slider-->
@@ -566,7 +565,7 @@
                     <p class="item-txt">Разработка мобильных <br> приложений</p>
                 </div>
             </div>
-            <a href="#" class="order">Закажите бесплатную консультацию</a>
+            <!-- <a href="#" class="order">Закажите бесплатную консультацию</a> -->
         </div>
     </article>
 
@@ -586,7 +585,7 @@
         <div class="block-right">
             <div class="footer-logo"><%= image_tag "img/epic-logo.png", alt: ""%></div>
             <a class="footer-up" href="#">Вверх</a>
-            <div class="contacts">333-22-11 <a href="">somemail@domain.ru</a></div>
+            <div class="contacts">333-22-11, <a href="">somemail@domain.ru</a></div>
             <a class="sitemap" href="#">Карта сайта</a>
 
         </div>

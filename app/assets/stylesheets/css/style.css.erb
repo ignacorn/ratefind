@@ -1,4 +1,4 @@
-/* Fonts */ 
+/* Fonts */
 @font-face {
   font-family: 'FranklinGothicBook';
   src: url(<%= font_path 'FRABK.eot' %>);
@@ -155,6 +155,9 @@ header {
   line-height: 48px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+.header.center {
+  text-align: center;
 }
 h3 {
   font-family: "Candara";
@@ -456,7 +459,7 @@ input[type="radio"] {
 input[type="radio"]:checked + label {
   background-color: #f88600;
 }
-label {
+label.sl {
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -473,6 +476,7 @@ label {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+  margin-bottom: 73px;
 }
 .item {
   width: 305px;
@@ -738,5 +742,203 @@ footer {
 @media screen and (max-width: 767px) {
   .sitemap {
     text-align: center;
+  }
+}
+.instruction-header {
+  color: black;
+  font-size: 24px;
+  font-family: "Candara";
+  font-weight: 400;
+  line-height: 48px;
+}
+.instruction-list {
+  color: black;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Candara";
+  font-weight: 300;
+}
+.forms {
+  padding-top: 74px;
+  padding-bottom: 54px;
+  background-image: url(<%= asset_path "img/form-background.png" %>);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.forms form {
+  max-width: 634px;
+}
+.label-big {
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0;
+}
+.label-small {
+  color: #2b4003;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 19px;
+  width: 200px;
+}
+.forms-font {
+  box-sizing: border-box;
+  color: #2b4003;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  background-color: white;
+  border: 2px solid #f88600;
+  border-radius: 10px;
+  padding: 6px 16px;
+}
+select {
+  box-sizing: border-box;
+  color: #2b4003;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  background-color: white;
+  border: 2px solid #f88600;
+  border-radius: 10px;
+  padding: 6px 16px;
+  width: 310px;
+  /*for WebKit*/
+  -webkit-appearance: none;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+  background: url(<%= asset_path "img/arrow_2.svg" %>) no-repeat 97% center, linear-gradient(to left, #f88600 0%, #f88600 40px, white 40px, white 100%);
+}
+option:hover {
+  background-color: #f88600;
+}
+input[type="date"] {
+  box-sizing: border-box;
+  color: #2b4003;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  background-color: white;
+  border: 2px solid #f88600;
+  border-radius: 10px;
+  padding: 6px 16px;
+  width: 175px;
+  margin-left: 5px;
+  padding: 4px 12px;
+}
+.submit {
+  display: block;
+  text-align: center;
+  width: 145px;
+  background-color: #f88600;
+  border-radius: 10px;
+  color: #2b4003;
+  font-size: 24px;
+  font-weight: 400;
+  border: 2px solid #f88600;
+  line-height: 32px;
+  margin-left: auto;
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .submit {
+    margin-bottom: 15px;
+  }
+}
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
+.divider {
+  max-width: 634px;
+  height: 10px;
+  margin: 54px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.divider .line {
+  height: 3px;
+  width: 46%;
+  background-color: #f88600;
+}
+.divider .round {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #f88600;
+}
+.stats {
+  background-image: url(<%= asset_path "img/stats-bg.png" %>);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+}
+.stats-container {
+  box-sizing: border-box;
+  max-width: 635px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .stats-container {
+    padding: 0 10px;
+  }
+}
+.stats-header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: "Candara";
+}
+.period {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: "Candara";
+}
+.table-container {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  background-color: #fbfff0;
+  border: 2px solid #de851b;
+  border-radius: 10px;
+  margin: 0 auto 28px;
+}
+table {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  border: 2px solid #fbfff0;
+  border-collapse: collapse;
+}
+@media screen and (max-width: 767px) {
+  table {
+    font-size: 12px;
+  }
+}
+table td {
+  text-align: center;
+  padding: 24px 0;
+  width: 33%;
+  border: 1px solid #f88600;
+}
+@media screen and (max-width: 767px) {
+  table td {
+    padding: 12px 0;
   }
 }
