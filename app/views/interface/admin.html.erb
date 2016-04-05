@@ -53,7 +53,7 @@
                     <p class="label-big">Изменения для имени:</p>
 
                     <div class="form-container">
-                        <p class="label-small"><%= select_tag "person_id", options_from_collection_for_select(Person.all, "id", "name") %></p>
+                        <p class="label-small"><%= select_tag "person_id", options_from_collection_for_select(Person.all, "ID", "Name") %></p>
                         <p class="label-small"><%= submit_tag "Удалить", class: "submit"  %></p>
                         
                     </div>
@@ -81,7 +81,7 @@
 
                     <div class="form-container">
                         <p class="label-big" for="site_by_site">Добавить ключевое слово для:</p>
-                        <%= select_tag "person_id", options_from_collection_for_select(Person.all, "id", "name") %>
+                        <%= select_tag "person_id", options_from_collection_for_select(Person.all, "ID", "Name") %>
                     </div>
                     <div class="form-container">   
                         <label class="label-big"><%= text_field_tag(:keyword, nil, placeholder: "Новое слово") %></label>
@@ -95,7 +95,7 @@
                     <p class="label-big">Изменения для ключевого слова:</p>
 
                     <div class="form-container">
-                        <p class="label-small"><%= select_tag "keyword_id", options_from_collection_for_select(Keyword.all, "id", "name") %></p>
+                        <p class="label-small"><%= select_tag "keyword_id", options_from_collection_for_select(Keyword.all, "ID", "Name") %></p>
                         <p class="label-small"><%= submit_tag "Удалить", class: "submit"  %></p>
                         
                     </div>
@@ -133,7 +133,7 @@
                     <p class="label-big">Изменения для сайта:</p>
 
                     <div class="form-container">
-                        <p class="label-small"><%= select_tag "site_id", options_from_collection_for_select(Site.all, "id", "name") %></p>
+                        <p class="label-small"><%= select_tag "site_id", options_from_collection_for_select(Site.all, "ID", "Name") %></p>
                         <p class="label-small"><%= submit_tag "Удалить", class: "submit"  %></p>
                         
                     </div>
