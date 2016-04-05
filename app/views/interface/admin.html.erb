@@ -1,4 +1,185 @@
-<h1>Interface#admin</h1>
-<div style="margin-left: 25%; width: 50%; border: 1px black; width: 800px" ></div>
-<%= console %>
-<p>Find me in app/views/interface/admin.html.erb</p>
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Для пользователя</title>
+<!-- <link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css"> -->
+<body>
+<header>
+    <div class="layout-center">
+        <div class="header-motto">Оцифрованная фантазия!</div>
+        <!--<div class="header-contacts">Почта</div>-->
+        <div class="header-contacts">333-22-11, somemail@domain.ru</div>
+    </div>
+</header>
+<main>
+    <div class="navigation clearfix">
+        <div class="layout-center">
+            <div class="logo"><%= image_tag "img/epic-logo.png", alt: ''%></div>
+            <ul class="menu">
+                <li class="menu-item"><%= link_to "О нас", "/index" %></li>
+                <li class="menu-item"><%= link_to "Наше предложение", "/product" %></li>
+                <li class="menu-item"><%= link_to "Для пользователя", "/user" %></li>
+                <li class="menu-item"><%= link_to "Для администратора", "/admin" %></li>
+            </ul>
+        </div>
+    </div>
+
+    <article>
+        <div class="layout-center">
+            <h1 class="header">Заголовок</h1>
+            <h4 class="instruction-header">Здесь может быть инструкция по использованию.</h4>
+            <ul class="instruction-list">
+                <li>сделайте то-то</li>
+                <li>нажмите туда-то</li>
+                <li>посмотрите результат там-то</li>
+            </ul>
+        </div>
+    </article>
+    <section class="forms">
+        <div class="layout-center">
+ 
+            	<%= form_tag("/result", method: "get") do %>
+
+                    <div class="form-container">
+                        <label class="label-big" for="site_by_site">Добавить новое имя:</label>
+                        <%= text_field_tag(:person_name, nil, placeholder: "Новое имя") %>
+                        <label class="label-big"> <%= submit_tag "Добавить", class: "submit"  %></label>
+                    </div>
+
+
+                    
+                    <p class="label-big">Изменения для имени:</p>
+
+                    <div class="form-container">
+                        <p class="label-small"><%= select_tag "person_id", options_from_collection_for_select(Person.all, "id", "name") %></p>
+                        <p class="label-small"><%= submit_tag "Удалить", class: "submit"  %></p>
+                        
+                    </div>
+
+                    <div class="form-container">
+
+                        <label class="label-small"> <%= text_field_tag(:person_edit, nil, placeholder: "Изменить на...") %></label>
+                       
+                        <label class="label-small"><%= submit_tag "Изменить", class: "submit"  %></label>
+
+                        
+                    </div>
+
+                <% end %>
+            <!-- </form> -->
+
+            <div class="divider">
+                <div class="line"></div>
+                <div class="round"></div>
+                <div class="line"></div>
+
+            </div>
+
+                <%= form_tag("/result", method: "get") do %>
+
+                    <div class="form-container">
+                        <p class="label-big" for="site_by_site">Добавить ключевое слово для:</p>
+                        <%= select_tag "person_id", options_from_collection_for_select(Person.all, "id", "name") %>
+                    </div>
+                    <div class="form-container">   
+                        <label class="label-big"><%= text_field_tag(:keyword, nil, placeholder: "Новое слово") %></label>
+                        
+                        
+                        <label class="label-big"> <%= submit_tag "Добавить", class: "submit"  %></label>
+                    </div>
+
+
+                    
+                    <p class="label-big">Изменения для ключевого слова:</p>
+
+                    <div class="form-container">
+                        <p class="label-small"><%= select_tag "keyword_id", options_from_collection_for_select(Keyword.all, "id", "name") %></p>
+                        <p class="label-small"><%= submit_tag "Удалить", class: "submit"  %></p>
+                        
+                    </div>
+
+                    <div class="form-container">
+
+                        <label class="label-small"> <%= text_field_tag(:keyword_edit, nil, placeholder: "Изменить на...") %></label>
+                       
+                        <label class="label-small"><%= submit_tag "Изменить", class: "submit"  %></label>
+
+                        
+                    </div>
+
+                <% end %>
+
+
+
+            <div class="divider">
+                <div class="line"></div>
+                <div class="round"></div>
+                <div class="line"></div>
+
+            </div>
+
+                <%= form_tag("/result", method: "get") do %>
+
+                    <div class="form-container">
+                        <label class="label-big" for="site_by_site">Добавить сайт:</label>
+                        <%= text_field_tag(:site, nil, placeholder: "Новый сайт") %>
+                        <label class="label-big"> <%= submit_tag "Добавить", class: "submit"  %></label>
+                    </div>
+
+
+                    
+                    <p class="label-big">Изменения для сайта:</p>
+
+                    <div class="form-container">
+                        <p class="label-small"><%= select_tag "site_id", options_from_collection_for_select(Site.all, "id", "name") %></p>
+                        <p class="label-small"><%= submit_tag "Удалить", class: "submit"  %></p>
+                        
+                    </div>
+
+                    <div class="form-container">
+
+                        <label class="label-small"> <%= text_field_tag(:site_edit, nil, placeholder: "Изменить на...") %></label>
+                       
+                        <label class="label-small"><%= submit_tag "Изменить", class: "submit"  %></label>
+
+                        
+                    </div>
+
+                <% end %>
+
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="layout-center clearfix">
+        <div class="block-left">
+            <div class="social-buttons">
+                <a href="https://vk.com/public118236873" class="social"><%= image_tag "img/icons/vk.svg", alt: ""%></a>
+                <a href="https://www.facebook.com/groups/1583861135260815/" class="social"><%= image_tag "img/icons/facebook.svg", alt: ""%></a>
+                <a href="https://twitter.com/EpicCreators" class="social"><%= image_tag "img/icons/twitter.svg", alt: ""%></a>
+            </div>
+            <p>© 2016, Веб-студия «Epic-Creators»</p>
+        </div>
+
+        <div class="block-right">
+            <div class="footer-logo"><%= image_tag "img/epic-logo.png", alt: ''%></div>
+            <a class="footer-up" href="#">Вверх</a>
+            <div class="contacts">333-22-11, <a href="">somemail@domain.ru</a></div>
+            <a class="sitemap" href="#">Карта сайта</a>
+
+        </div>
+
+        <div class="block-center">
+            <%= image_tag "img/liveinternet.png", alt: "", class: "counter"%>
+            <%= image_tag "img/counter.png", alt: "", class: "counter"%>
+        </div>
+
+    </div>
+</footer>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/scrolltop.js"></script>
+</body>
+</html>

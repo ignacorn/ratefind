@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Результаты</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="layout-center">
+        <div class="header-motto">Оцифрованная фантазия!</div>
+        <div class="header-contacts">333-22-11, somemail@domain.ru</div>
+    </div>
+</header>
+<main>
+    <div class="navigation clearfix">
+        <div class="layout-center">
+            <div class="logo"><img src="img/epic-logo.png" alt=""></div>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">О нас</a></li>
+                <li class="menu-item"><a href="product.html">Наше предложение</a></li>
+                <li class="menu-item"><a href="#">Для пользователя</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <article>
+        <h1 class="header center">Результаты вашего запроса</h1>
+
+        <div class="stats">
+            <div class="stats-container">
+                <h4 class="stats-header">Статистика</h4>
+                <p class="period"><%= p "За период c #{@f} " unless @f.nil? || @s.nil? %><%= p "по #{@s}" unless @f.nil? || @s.nil? %></p>
+
+               
+	             
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <td>Объект исследования</td>
+                            <td>Сайт</td>
+                            <td>Результат</td>
+                        </tr>
+                        <tr>
+                            <td><%= Person.find(params[:person_id]).name %></td>
+                            <td><%= Site.find(params[:site_id]).name %></td>
+                            <td><%= @stat %></td>
+                        </tr>
+                     
+                    </table>
+
+
+                </div>
+                <%= link_to 'Назад', '/user', class: 'submit' %><!-- <a href="userpage.html" class="submit">Назад</a> -->
+            </div>
+        </div>
+    </article>
+</main>
+
+
+<footer>
+    <div class="layout-center clearfix">
+        <div class="block-left">
+            <div class="social-buttons">
+                <a href="https://vk.com/public118236873" class="social"><img src="img/icons/vk.svg" alt=""></a>
+                <a href="https://www.facebook.com/groups/1583861135260815/" class="social"><img src="img/icons/facebook.svg"
+                                                                                                alt=""></a>
+                <a href="https://twitter.com/EpicCreators" class="social"><img src="img/icons/twitter.svg" alt=""></a>
+            </div>
+            <p>© 2016, Веб-студия «Epic-Creators»</p>
+        </div>
+
+        <div class="block-right">
+            <div class="footer-logo"><img src="img/epic-logo.png" alt=""></div>
+            <a class="footer-up" href="#">Вверх</a>
+            <div class="contacts">333-22-11, <a href="">somemail@domain.ru</a></div>
+            <a class="sitemap" href="#">Карта сайта</a>
+
+        </div>
+
+        <div class="block-center">
+            <img class="counter" src="img/liveinternet.png" alt="">
+            <img class="counter" src="img/counter.png" alt="">
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+  <br>
+  <br>
+<div style ="margin-left: 15px;">
+
+<br>
+<br>
+
+
+</div>
+
+
+
+

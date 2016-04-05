@@ -26,6 +26,7 @@
                 <li class="menu-item "><%= link_to "О нас", "/index" %><!-- <a href="index.html">О нас</a> --></li>
                 <li class="menu-item active"><%= link_to "Наше предложение", "/product" %><!-- <a href="product.html">Наше предложение</a> --></li>
                 <li class="menu-item"><%= link_to "Для пользователя", "/user" %><!-- <a href="#">Контакты</a> --></li>
+                <li class="menu-item"><%= link_to "Для администратора", "/admin" %></li>
             </ul>
         </div>
     </div>
@@ -162,7 +163,6 @@
             </div>
 
 
-            <a href="#" class="order">Закажите бесплатную консультацию</a>
 
         </div>
     </article>
@@ -183,7 +183,7 @@
 
         </div>
         <div class="block-right">
-            <div class="footer-logo">Логотип</div>
+            <div class="footer-logo"><%= image_tag "img/epic-logo.png", alt: ""%></div>
             <a class="footer-up" href="#">Вверх</a>
             <div class="contacts">333-22-11, <a href="">somemail@domain.ru</a></div>
             <a class="sitemap" href="#">Карта сайта</a>

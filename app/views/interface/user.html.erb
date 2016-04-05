@@ -3,8 +3,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Для пользователя</title>
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/style.css">
+<!-- <link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css"> -->
 <body>
 <header>
     <div class="layout-center">
@@ -16,7 +16,7 @@
 <main>
     <div class="navigation clearfix">
         <div class="layout-center">
-            <div class="logo"><img src="img/epic-logo.png" alt=""></div>
+            <div class="logo"><%= image_tag "img/epic-logo.png", alt: ''%></div>
             <ul class="menu">
                 <li class="menu-item"><a href="index.html">О нас</a></li>
                 <li class="menu-item"><a href="product.html">Наше предложение</a></li>
@@ -38,33 +38,42 @@
     </article>
     <section class="forms">
         <div class="layout-center">
-            <form class="by_site" action="">
-
+            <!-- <form class="by_site" action=""> -->
+            	<%= form_tag("/stat", method: "get") do %>
                 <div class="form-container">
                     <label class="label-big" for="site_by_site">Статистика по сайту:</label>
 
-                    <select name="site" id="site_by_site">
+                   <!--  <select name="site" id="site_by_site">
                         <option value="a">lenta.ru</option>
                         <option value="b">yandex</option>
                         <option value="c">bbc</option>
-                    </select>
+                    </select> -->
+
+					<%= select_tag "site_id", options_from_collection_for_select(Site.all, "id", "name")%>
+
                 </div>
 
                 <div class="form-container">
                     <label class="label-big" for="obj_by_site">Для объекта исследования:</label>
 
-                    <select name="object" id="obj_by_site">
+                    <!-- <select name="object" id="obj_by_site">
                         <option value="c">Клуб «Реал»</option>
                         <option value="e">Клуб «Реал»</option>
                         <option value="f">Клуб «Реал»</option>
-                    </select>
+                    </select> -->
+
+                    <%= select_tag "person_id", options_from_collection_for_select(Person.all, "id", "name")%>
+
+
                 </div>
+                <%= submit_tag "Показать", class: "submit" %>
+                
                 <!--<input class="submit" type="submit" value="Показать">-->
-                <a href="results.html" class="submit">Показать</a>
+                <!-- <a href="results.html" class="submit">Показать</a> -->
 
 
-
-            </form>
+                <% end %>
+            <!-- </form> -->
 
             <div class="divider">
                 <div class="line"></div>
@@ -73,23 +82,25 @@
 
             </div>
 
-            <form class="by_date" action="">
+            <%= form_tag("/stat", method: "get") do %>
 
                 <div class="form-container">
                     <label class="label-big" for="site_by_date">Статистика по сайту:</label>
-
+<!-- 
                     <select name="site2" id="site_by_date">
                         <option value="g">lenta.ru</option>
                         <option value="h">yandex</option>
                         <option value="i">bbc</option>
-                    </select>
+                    </select> -->
+
+                    <%= select_tag "site_id", options_from_collection_for_select(Site.all, "id", "name")%>
                 </div>
 
                 <div class="form-container">
                 <p class="label-big">За период (дд.мм.ггг):</p>
                 <div>
-                <label class="label-small" for="date_from">от <input type="date" id="date_from"></label>
-                <label class="label-small" for="date_to">от <input type="date" id="date_to"></label>
+                <label class="label-small" for="date_from">от <%= date_field(:date, :first) %><!-- <input type="date" id="date_from"> --></label>
+                <label class="label-small" for="date_to">от <%= date_field(:date, :second) %><!-- <input type="date" id="date_to"> --></label>
                 </div>
                 </div>
 
@@ -97,15 +108,19 @@
 
                 <label class="label-big" for="obj_by_date">Для объекта исследования:</label>
 
-                <select name="object2" id="obj_by_date">
+               <!--  <select name="object2" id="obj_by_date">
                     <option value="j">Клуб «Реал»</option>
                     <option value="k">Клуб «Реал»</option>
                     <option value="l">Клуб «Реал»</option>
                 </select>
+ -->
+                    <%= select_tag "person_id", options_from_collection_for_select(Person.all, "id", "name")%>
+
                 </div>
                 <!--<input class="submit" type="submit" value="Показать">-->
-                <a href="results.html" class="submit">Показать</a>
-            </form>
+                <!-- <a href="results.html" class="submit">Показать</a> -->
+                <%= submit_tag "Показать", class: "submit" %>
+            <% end %>
         </div>
     </section>
 </main>
@@ -113,15 +128,15 @@
     <div class="layout-center clearfix">
         <div class="block-left">
             <div class="social-buttons">
-                <a href="https://vk.com/public118236873" class="social"><img src="img/icons/vk.svg" alt=""></a>
-                <a href="https://www.facebook.com/groups/1583861135260815/" class="social"><img src="img/icons/facebook.svg" alt=""></a>
-                <a href="https://twitter.com/EpicCreators" class="social"><img src="img/icons/twitter.svg" alt=""></a>
+                <a href="https://vk.com/public118236873" class="social"><%= image_tag "img/icons/vk.svg", alt: ""%></a>
+                <a href="https://www.facebook.com/groups/1583861135260815/" class="social"><%= image_tag "img/icons/facebook.svg", alt: ""%></a>
+                <a href="https://twitter.com/EpicCreators" class="social"><%= image_tag "img/icons/twitter.svg", alt: ""%></a>
             </div>
             <p>© 2016, Веб-студия «Epic-Creators»</p>
         </div>
 
         <div class="block-right">
-            <div class="footer-logo"><img src="img/epic-logo.png" alt=""></div>
+            <div class="footer-logo"><%= image_tag "img/epic-logo.png", alt: ''%></div>
             <a class="footer-up" href="#">Вверх</a>
             <div class="contacts">333-22-11, <a href="">somemail@domain.ru</a></div>
             <a class="sitemap" href="#">Карта сайта</a>
@@ -129,8 +144,8 @@
         </div>
 
         <div class="block-center">
-            <img class="counter" src="img/liveinternet.png" alt="">
-            <img class="counter" src="img/counter.png" alt="">
+            <%= image_tag "img/liveinternet.png", alt: "", class: "counter"%>
+            <%= image_tag "img/counter.png", alt: "", class: "counter"%>
         </div>
 
     </div>

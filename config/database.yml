@@ -5,9 +5,17 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  # adapter: sqlite3
   pool: 5
   timeout: 5000
+
+  adapter: mysql
+  encoding: utf8
+  database: ratefinder
+  username: phpak
+  password: josahLlGtsNngXBR
+  host: homechel.ddns.net
+  port: 50006
 
 development:
   <<: *default

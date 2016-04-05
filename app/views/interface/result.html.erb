@@ -17,11 +17,12 @@
 <main>
     <div class="navigation clearfix">
         <div class="layout-center">
-            <div class="logo"><img src="img/epic-logo.png" alt=""></div>
+            <div class="logo"><%= image_tag "img/epic-logo.png", alt: ""%></div>
             <ul class="menu">
-                <li class="menu-item"><a href="index.html">О нас</a></li>
-                <li class="menu-item"><a href="product.html">Наше предложение</a></li>
-                <li class="menu-item"><a href="#">Для пользователя</a></li>
+                <li class="menu-item"><%= link_to "О нас", "/index" %></li>
+                <li class="menu-item"><%= link_to "Наше предложение", "/product" %></li>
+                <li class="menu-item"><%= link_to "Для пользователя", "/user" %></li>
+                <li class="menu-item"><%= link_to "Для администратора", "/admin" %></li>
             </ul>
         </div>
     </div>
@@ -31,28 +32,56 @@
 
         <div class="stats">
             <div class="stats-container">
-                <h4 class="stats-header">Статистика</h4>
-                <p class="period">За период 2013.12.12--2015.05.05</p>
+                <h4 class="stats-header">
+                    Произведены действия:
+                </h4>
+
+                <p class="period">
+
+                 
+                    <%= @result[:message_text]%>
+<% console %>
+                </p>
+
+
                 <div class="table-container">
                     <table>
-                        <tr>
-                            <td>Объект исследования</td>
-                            <td>Сайт</td>
-                            <td>Результат</td>
-                        </tr>
-                        <tr>
-                            <td>Яблоки</td>
-                            <td>lenta.ru</td>
-                            <td>47</td>
-                        </tr>
-                        <tr>
-                            <td>Яблоки</td>
-                            <td>lenta.ru</td>
-                            <td>47</td>
-                        </tr>
+                        <% case @result[:flag] %>
+                            <% when "person"%>
+                            <%= render html: "<th>Всего личностей</th>".html_safe %>
+                               
+                                <% @persons.each do |p| %>
+                                    <tr>                                    
+                                    <td><%= p.name %></td>   
+                                    </tr>
+                                <% end %>
+
+
+                            <% when "keyword"%>
+                            <%= render html: "<th>Всего ключевых слов</th>".html_safe %>
+                               
+                                <% @keywords.each do |p| %>
+                                    <tr>                                    
+                                    <td><%= p.name %></td>   
+                                    </tr>
+                                <% end %>
+
+
+
+                            <% when "site"%>
+                            <%= render html: "<th>Всего личностей</th>".html_safe %>
+                               
+                                <% @sites.each do |p| %>
+                                    <tr>                                    
+                                    <td><%= p.name %></td>   
+                                    </tr>
+                                <% end %>
+                        <% end %>
+
+                    
                     </table>
                 </div>
-                <a href="userpage.html" class="submit">Назад</a>
+                <%= link_to "Назад", admin_path, class: "submit" %><!-- <a href="userpage.html" class="submit">Назад</a> -->
             </div>
         </div>
     </article>
@@ -63,16 +92,15 @@
     <div class="layout-center clearfix">
         <div class="block-left">
             <div class="social-buttons">
-                <a href="https://vk.com/public118236873" class="social"><img src="img/icons/vk.svg" alt=""></a>
-                <a href="https://www.facebook.com/groups/1583861135260815/" class="social"><img src="img/icons/facebook.svg"
-                                                                                                alt=""></a>
-                <a href="https://twitter.com/EpicCreators" class="social"><img src="img/icons/twitter.svg" alt=""></a>
+                <a href="https://vk.com/public118236873" class="social"><%= image_tag "img/icons/vk.svg", alt: ""%></a>
+                <a href="https://www.facebook.com/groups/1583861135260815/" class="social"><%= image_tag "img/icons/facebook.svg", alt: ""%></a>
+                <a href="https://twitter.com/EpicCreators" class="social"><%= image_tag "img/icons/twitter.svg", alt: ""%></a>
             </div>
             <p>© 2016, Веб-студия «Epic-Creators»</p>
         </div>
 
         <div class="block-right">
-            <div class="footer-logo"><img src="img/epic-logo.png" alt=""></div>
+            <div class="footer-logo"><%= image_tag "img/epic-logo.png", alt: ""%></div>
             <a class="footer-up" href="#">Вверх</a>
             <div class="contacts">333-22-11, <a href="">somemail@domain.ru</a></div>
             <a class="sitemap" href="#">Карта сайта</a>
@@ -80,8 +108,8 @@
         </div>
 
         <div class="block-center">
-            <img class="counter" src="img/liveinternet.png" alt="">
-            <img class="counter" src="img/counter.png" alt="">
+            <%= image_tag "img/liveinternet.png", alt: "", class: "counter"%>
+            <%= image_tag "img/counter.png", alt: "", class: "counter"%>
         </div>
 
     </div>
