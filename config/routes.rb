@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   get "/test" => "users#test"
   get '/user' => 'interface#user'
   get '/admin' => 'interface#admin'
-  get '/action' => 'interface#action'
   get '/result' => 'interface#result'
+  get '/stat' => 'interface#stat'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

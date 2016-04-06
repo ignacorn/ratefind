@@ -18,9 +18,10 @@
         <div class="layout-center">
             <div class="logo"><%= image_tag "img/epic-logo.png", alt: ''%></div>
             <ul class="menu">
-                <li class="menu-item"><a href="index.html">О нас</a></li>
-                <li class="menu-item"><a href="product.html">Наше предложение</a></li>
-                <li class="menu-item active"><a href="#">Для пользователя</a></li>
+                <li class="menu-item"><%= link_to "О нас", "/index" %></li>
+                <li class="menu-item"><%= link_to "Наше предложение", "/product" %></li>
+                <li class="menu-item"><%= link_to "Для пользователя", "/user" %></li>
+                <li class="menu-item"><%= link_to "Для администратора", "/admin" %></li>
             </ul>
         </div>
     </div>
