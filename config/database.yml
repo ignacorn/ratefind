@@ -9,7 +9,7 @@ default: &default
   pool: 5
   timeout: 5000
 
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   database: ratefinder
   username: phpak
