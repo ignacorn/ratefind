@@ -1,5 +1,5 @@
 class InterfaceController < ApplicationController
-include Processor
+
 	
   def user
   	# @article={}
