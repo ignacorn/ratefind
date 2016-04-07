@@ -24,7 +24,9 @@ class InterfaceController < ApplicationController
 
 
   def stat
-    @stat = rand(0..100)
+    rank=Person.find(params[:person_id]).ranks
+
+    @stat = rank.inject(0){|sum,i| sum+i.Rank}
     if params.include? :date
       @f=Date.parse(params[:date][:first])
       @s=Date.parse(params[:date][:second])
