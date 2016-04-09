@@ -140,7 +140,7 @@ module Processor
 		    if Person.find_by(id: person_id).nil?
 		      @result[:message_text] = "Личность отсутствует в базе!"
 		    else
-		      person_id.empty? ? @result[:message_text] = "Имя не указано!" : @result[:message_text] << Person.find(person_id).name
+		      person_id.empty? ? @result[:message_text] = "Имя не указано!" : @result[:message_text] << Person.find(person_id).Name
 		      Person.find(person_id).destroy unless person_id.empty?
 		    end
 
@@ -151,7 +151,7 @@ module Processor
 		   	 if Keyword.find_by(id: keyword_id).nil?
 		      keyword_id = "Ключевое слово отсутствует в базе!"
 		    else
-		      keyword_id.empty? ? @result[:message_text] = "Ключевое слово не указано!" : @result[:message_text] << Keyword.find(keyword_id).name
+		      keyword_id.empty? ? @result[:message_text] = "Ключевое слово не указано!" : @result[:message_text] << Keyword.find(keyword_id).Name
 		      Keyword.find(keyword_id).destroy unless keyword_id.empty?
 		    end
 
@@ -162,7 +162,7 @@ module Processor
 		    if Site.find_by(id: site_id).nil?
 		      @result[:message_text] = "Сайт отсутствует в базе!"
 		    else
-		     site_id.empty? ? @result[:message_text] = "Сайт не указан!" : @result[:message_text] << Site.find(site_id).name
+		     site_id.empty? ? @result[:message_text] = "Сайт не указан!" : @result[:message_text] << Site.find(site_id).Name
 		     Site.find(site_id).destroy unless site_id.empty?
 		    end
 				   	
