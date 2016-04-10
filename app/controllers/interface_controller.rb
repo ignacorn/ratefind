@@ -26,7 +26,7 @@ class InterfaceController < ApplicationController
   def stat
     rank=Rank.where(PersonID: params[:person_id]).includes(:page)
 
-    @stat = rank.inject(0){|sum,i| sum+i.Rank if i.page.SiteID == params[:site_id]}
+    @stat = rank.inject(0){|sum,i| sum+i.Rank if i.page.SiteID.to_s == params[:site_id]}
 
 
     if params.include? :date
@@ -39,7 +39,7 @@ class InterfaceController < ApplicationController
         date_end=Date.parse(params[:date][:first])
       end
 
-      @stat = rank.inject(0){|sum,i| sum+i.Rank if i.page.SiteID == params[:site_id] && i.page.FoundDateTime>date_begin && i.page.FoundDateTime<date_end}
+      @stat = rank.inject(0){|sum,i| sum+i.Rank if i.page.SiteID.to_s == params[:site_id] && Date.parse(i.page.FoundDateTime.to_s)>date_begin && Date.parse(i.page.FoundDateTime.to_s)<date_end}
     end
 
     @persons = Person.all
